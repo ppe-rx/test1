@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueBoxHD - Watch Your Favorite Videos</title>
+    <!-- Add preloading/preconnect -->
+    <link rel="preconnect" href="https://ic-vt-nss.xhcdn.com">
+    <link rel="dns-prefetch" href="https://ic-vt-nss.xhcdn.com">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/2ymwfwSb/Icon.png">
+    <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type='text/javascript' src='//duringcereal.com/55/e8/a5/55e8a525e0457b7612a5bab8c24b550d.js'></script>
+    
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="BlueBoxHD - Watch Your Favorite Videos">
+    <meta property="og:image" content="https://i.postimg.cc/Dw0ygvn5/https-gluesletter-substack-com-api-v1-post-preview-119523043-twitter.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BlueBoxHD - Watch Your Favorite Videos">
+    <meta name="twitter:image" content="https://i.postimg.cc/Dw0ygvn5/https-gluesletter-substack-com-api-v1-post-preview-119523043-twitter.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Amazing Nature Documentary 2025",
+      "description": "BlueBoxHD - Discover Exclusive Video Link...",
+      "uploadDate": "2025-06-15T08:00:00+00:00",
+      "contentUrl": "",
+      "duration": "PT12M44S",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/WatchAction",
+        "userInteractionCount": 1245789
+      }
+    }
+    </script>
+
+    <style>
+        /* Header enhancements */
+        header {
+            background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #002af9;
+        }
+        
+        .logo i {
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        nav ul li a:hover {
+            color: #ff4d4d;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .search-bar {
+            position: relative;
+        }
+        
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border-radius: 30px;
+            border: none;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            width: 220px;
+            transition: all 0.3s;
+        }
+        
+        .search-bar input:focus {
+            outline: none;
+            background: rgba(255,255,255,0.25);
+            width: 280px;
+        }
+        
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .user-profile {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff4d4d, #ff3333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* Main video section enhancements */
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .like-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .like-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-weight: 500;
+        }
+        
+        .like-btn:hover {
+            background: #ffecec;
+            color: #ff4d4d;
+        }
+        
+        .like-btn.liked {
+            background: #ffebeb;
+            color: #ff4d4d;
+        }
+        
+        .like-btn.liked i {
+            color: #ff4d4d;
+        }
+        
+        /* Recommended videos enhancements */
+        .video-card-info {
+            padding: 15px;
+        }
+        
+        .video-card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+        
+        .video-card-views {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .video-card-likes {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+        }
+        
+        .video-card-likes i {
+            color: #ff4d4d;
+        }
+        
+        /* Rest of your original CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-content {
+            padding: 30px 0;
+        }
+        
+        .video-player-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s;
+            flex: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .btn i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .btn-watch {
+            background: linear-gradient(45deg, #4361ee, #3a0ca3);
+        }
+        
+        .btn-watch:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-download {
+            background: linear-gradient(45deg, #4cc9f0, #4895ef);
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 201, 240, 0.4);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: #333;
+        }
+        
+        .recommended-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-duration {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-card-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+		
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 70px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .social-icon:hover {
+            background: #4361ee;
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .recommended-videos {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .search-bar input {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-duration {
+                font-size: 10px;
+                padding: 2px 6px;
+            }
+            
+            .btn i {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+            
+            .video-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-play-circle"></i>
+                    BlueBoxHD
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')"><i class="fas fa-fire"></i> Trending</a></li>
+                        <li><a href="javascript:void(0)" onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')"><i class="fas fa-plus-circle"></i> Request</a></li>
+                    </ul>
+                </nav>
+                
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="video-player-container">
+                <div class="video-wrapper">
+				
+				
+				
+				
+				
+				
+				<IFRAME SRC="https://movearnpre.com/embed/1bfnsjbc125t" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=640 HEIGHT=360 allowfullscreen></IFRAME>	
+               
+
+
+
+
+
+
+			   </div>
+                <div class="video-info">
+                    <h1 class="video-title">BlueBoxHD - Friends MOM Swap Hd Video</h1>
+                    <div class="video-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>1,245,789 views</span>
+                        </div>
+						<div class="meta-item">
+                            <i class="fas fa-heart"></i>
+                            <span>24K Likes</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Uploaded: <span id="currentDate"></span></span>
+                        </div>                        
+                    </div>
+
+                    <div class="like-section">
+                        <button class="like-btn" id="likeButton">
+                            <i class="far fa-heart"></i>
+                            <span>Like this video</span>
+                        </button>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="javascript:void(0)" onclick="window.open('https://duringcereal.com/ys59w1bpm?key=1a1a45a10e6e8b30a44901a25bdb4fee', '_blank');" class="btn btn-watch">
+                            <i class="fas fa-play-circle"></i> Watch Now
+                        </a>
+                        <a href="javascript:void(0)" onclick="window.open('https://duringcereal.com/ys59w1bpm?key=1a1a45a10e6e8b30a44901a25bdb4fee', '_blank');" class="btn btn-download">
+                            <i class="fas fa-download"></i> Download HD
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Recommended Videos</h2>
+            <div class="recommended-videos">
+                <!-- Video 1 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/MDU3YWU0NDg3MmVhNjU1NTI2M2Q4YTMzYmFmNTMxZjA/s(w:526,h:298),webp/025/542/842/1280x720.17331330.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">12:39</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">StepBrother fucked hard the sexy Bhabhi</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>845K</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>42K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+				<div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/ZjIyYjdiNWUxNTNlYjZlMjc3N2Q5NDk2ZDRhNDA0ZTc/s(w:526,h:298),webp/023/144/285/v2/526x298.212.webp" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">17:38</span>
+                    </div>                    
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">I give my stepson a rich blowjob for breakfast </h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>1.1M</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>62K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+                              
+                <!-- Video 3 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/YzM1ZTE1NTI2MGYwNzA1MmRjODgwOWJhZjhlN2MwZjA/s(w:526,h:298),webp/026/085/908/1280x720.17410021.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">21:27</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">I Fucked My Bengali Aunty</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>723K</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>38K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/YzU1MjQxNjZhNDc5MGMwMTQzMTQ1MzE3OGY1NDA4YTI/s(w:526,h:298),webp/026/082/660/1280x720.17415208.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">11:57</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Muslim aunty was squirting during fuck</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>956K</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>51K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/ZjM5NjZhMzAxODJlMDFmOWQ5NzBlMDU3YTA2Yjk1M2E/s(w:526,h:298),webp/026/251/514/1280x720.17433738.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">14:27</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Desi hot sexy auntie sex with me fucking hard</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>1.5M</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>89K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/YmVmOWI3NTUyYjA3MWZhMGNhZDUxOWJhNDk2YzlmMjc/s(w:526,h:298),webp/026/316/120/1280x720.17445716.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">16:14</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Hardcore with my sexy Aunty and enjoying the</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>892K</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>47K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 7 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/ZjdkZGZkNzQ1MjI3MmMyMDA3ZGU2Mjk5ODcwMDVjZDk/s(w:526,h:298),webp/026/428/058/1280x720.17455274.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">17:09</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Went to Coxsbazar tour and had sex for the first</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>1.2M</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>67K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 8 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/MDFlNjZlNDEyNzk4ZjIxYzcxZDg3NDdhMjZiMjk5M2I/s(w:526,h:298),webp/023/044/217/1280x720.c.jpg.v1676559987" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">13:29</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Wife ne sabji me namak nhi Dala to chut chatni</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>678K</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>35K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 9 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/MzhmZDYxYmI3ZjFhZTFhZmFlYzQ3YTY3MTI3NWUwMjI/s(w:526,h:298),webp/023/862/237/v2/526x298.211.webp" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">18:36</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">I fucked the cheating wife of a foreigner</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>1.9M</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>98K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 10 -->
+                <div class="video-card" onclick="window.open('https://duringcereal.com/d0m1dzpy?key=2df1d555140df3217c39f9a35c604f3e', '_blank');">
+                    <div class="video-thumbnail">
+                        <img src="https://ic-vt-nss.xhcdn.com/a/YzI0NGI4ZTI3ZDY2ZGQ4ZWE2YzBlNWZjYWJhMTEyZDU/s(w:526,h:298),webp/025/983/692/1280x720.17397733.jpg" alt="Recommended Video" loading="lazy">
+                        <span class="video-duration">23:40</span>
+                    </div>
+                    <div class="video-card-info">
+                        <h3 class="video-card-title">Desi Bhabhi fucking with her house manger</h3>
+                        <div class="video-card-meta">
+                            <div class="video-card-views">
+                                <i class="fas fa-eye"></i>
+                                <span>1.2M</span>
+                            </div>
+                            <div class="video-card-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>67K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="social-icons">
+        <a href="javascript:void(0)" 
+           onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')" 
+           class="social-icon">
+           <i class="fab fa-facebook-f"></i>
+        </a>
+           
+        <a href="javascript:void(0)" 
+           onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')" 
+           class="social-icon">
+           <i class="fab fa-twitter"></i>
+        </a>
+           
+        <a href="javascript:void(0)" 
+           onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')" 
+           class="social-icon">
+           <i class="fab fa-instagram"></i>
+        </a>
+           
+        <a href="javascript:void(0)" 
+           onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')" 
+           class="social-icon">
+           <i class="fab fa-youtube"></i>
+        </a>
+		
+		<a href="javascript:void(0)" 
+           onclick="window.open('https://duringcereal.com/wekkhrgf5?key=e573b974e87f374db3f25e3e20b9fb51', '_blank')" 
+           class="social-icon">
+           <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BlueBoxHD. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="javascript:void(0)" 
+                   style="color: #aaa; margin: 0 10px;" 
+                   onclick="window.open('/terms-of-service', '_blank')">
+                   Terms of Service
+                </a>
+                <a href="javascript:void(0)" 
+                   style="color: #aaa; margin: 0 10px;" 
+                   onclick="window.open('/privacy-policy', '_blank')">
+                   Privacy Policy
+                </a>
+                <a href="javascript:void(0)" 
+                   style="color: #aaa; margin: 0 10px;" 
+                   onclick="window.open('/contact-us', '_blank')">
+                   Contact Us
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateSpan = document.getElementById('currentDate');
+        const today = new Date();
+        const yesterday = new Date(today);
+        yesterday.setDate(today.getDate() - 1); // Subtract 1 day
+        
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateSpan.textContent = yesterday.toLocaleDateString('en-US', options);
+        
+        // Like button functionality
+        const likeButton = document.getElementById('likeButton');
+        likeButton.addEventListener('click', function() {
+            this.classList.toggle('liked');
+            const icon = this.querySelector('i');
+            const text = this.querySelector('span');
+            
+            if (this.classList.contains('liked')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                text.textContent = 'Liked!';
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                text.textContent = 'Like this video';
+            }
+        });
+    });
+    </script>
+    <!-- Histats.com  START  (aync)-->
+    <script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,4941467,4,0,0,0,00010000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+    <!-- Histats.com  END  -->
+	<script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
+	
+</body>
+</html>
